@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>EditGame</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('deadpool.jpg')">
+                <div class="content">
+                    <h2>Secreto De Amor</h2>
+                    <h3>"Aveces quiero tirar
+                        la toalla .  .  .
+                        pero luego con que me seco ? " - Tu Chikistrikis
+                    </h3>
+                    <div class="play">
+                        <button class="reproductor">Play</button>
+                        <audio src=""></audio>
+                    </div>
+                    <div class="stop">
+                        <button class="pause">Pause</button>
+                        <audio src=""></audio>
+                    </div>       
+                    
+                </div>
+            </div>
+            <div class="slides" style="--img: url('endgame.jpg')">
+                <div class="content">
+                    <h2>Rosa Pastel</h2>
+                    <h3>
+                        "Achis achis" - Los Mariachis
+                    </h3>
+                    <div class="play2">
+                        <button class="reproductor">Play</button>
+                    </div>
+                    <div class="stop2">
+                        <button class="pause">Pause</button>
+                    </div> 
+                    
+                </div>
+            </div>
+            <div class="slides" style="--img: url('strange.jpg')">
+                <div class="content">
+                    <h2>Barbie Girl</h2>
+                    <h3>
+                        "Me lleva" - El Chanfle
+                    </h3>
+                    <div class="play3">
+                        <button class="reproductor">Play</button>
+                    </div>
+                    <div class="stop3">
+                        <button class="pause">Pause</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="slides" style="--img: url('simios.jpg')">
+                <div class="content">
+                    <h2>Colgado en tus manos</h2>
+                    <h3>
+                        "Matanga" - La Changa
+                    </h3>
+                    <div class="play4">
+                        <button class="reproductor">Play</button>
+                    </div>
+                    <div class="stop4">
+                        <button class="pause">Pause</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="slides" style="--img: url('star.jpg')">
+                <div class="content">
+                    <h2>Tu carcel</h2>
+                    <h3>
+                        "¿Eres parte de la resistencia?, No yo soy la resistencia" - El Niño
+                    </h3>
+                    <div class="play5">
+                        <button class="reproductor">Play</button>
+                    </div>
+                    <div class="stop5">
+                        <button class="pause">Pause</button>
+                    </div> 
+                </div>
+            </div>
+            <div class="slides" style="--img: url('cars.jpg')">
+                <div class="content">
+                    <h2>Tu Falta De Querer</h2>
+                    <h3>
+                        "Un ganador no se cuantos perdedores" - Yo Desayuno Perdedores
+                    </h3>
+                    <div class="play6">
+                        <button class="reproductor">Play</button>
+                    </div>
+                    <div class="stop6">
+                        <button class="pause">Pause</button>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class="prev"></span>
+            <span class="next"></span>
+        </div>
+    </div>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function () {
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+    </script>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
